@@ -135,7 +135,7 @@ print(f"Is weakly connected: {nx.is_weakly_connected(G)}")
 print("\nTrophic levels:")
 for level, organisms in enumerate([producers, primary_consumers, secondary_consumers, tertiary_consumers]):
     print(f"Level {level}: {', '.join(organisms)}")
-
+    
 print("\nTop predators (no outgoing edges):")
 top_predators = [node for node in G.nodes() if G.out_degree(node) == 0]
 print(f"{', '.join(top_predators)}")
